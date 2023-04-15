@@ -3,7 +3,7 @@
 #include <EthernetUdp.h>  // UDP library from: bjoern@cs.stanford.edu 12/30/2008
 #include "FastLED.h"
 //led pin
-#define DATA_PIN 5
+#define DATA_PIN 2
 /////////////////////
 #define short_get_high_byte(x) ((HIGH_BYTE & x) >> 8)
 #define short_get_low_byte(x) (LOW_BYTE & x)
@@ -54,8 +54,6 @@ EthernetUDP Udp;
 //leds
 #define NUM_LEDS 6 * 54
 CRGB leds[NUM_LEDS];
-
-
 
 void setup() {
   Serial.begin(115200);
