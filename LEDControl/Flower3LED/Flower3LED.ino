@@ -122,9 +122,7 @@ void onDmxFrame(uint16_t universe, uint16_t length, uint8_t sequence, uint8_t* d
 
   if (sendFrame) {
     FastLED.show();
-
-    // FastLED.delay(5);
-    // Reset universeReceived to 0
+    FastLED.delay(5);
     memset(universesReceived, 0, maxUniverses);
   }
 }
@@ -137,11 +135,9 @@ void setup() {
   initTest();
 
   memset(universesReceived, 0, maxUniverses);
-  // this will be called for each packet received
   artnet.setArtDmxCallback(onDmxFrame);
 }
 
 void loop() {
-  // we call the read function inside the loop
   artnet.read();
 }

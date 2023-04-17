@@ -6,7 +6,7 @@
 #include <VarSpeedServo.h>
 
 //  *** ETHERNET SETUP ***
-byte mac[] = { 0x90, 0xA2, 0xDA, 0x0E, 0x9E, 0x7F };
+byte mac[] = { 0x90, 0xA2, 0xDA, 0x0E, 0x9E, 0x8F };
 byte ip[] = { 192, 168, 0, 104 };
 int ServoInPort = 10000;
 
