@@ -12,17 +12,17 @@ const char* ssid = "ConsoleWireless";
 const char* password = "WirelessConsole";
 
 // LED settings
-const int numLeds = 6*36;                     // CHANGE FOR YOUR SETUP
+const int numLeds = 10;                     // CHANGE FOR YOUR SETUP
 const int numberOfChannels = numLeds * 3;  // Total number of channels you want to receive (1 led = 3 channels)
 const byte dataPin = 2;
 CRGB leds[numLeds];
 
 // Art-Net settings
 ArtnetWifi artnet;
-const int startUniverse = 5;  // CHANGE FOR YOUR SETUP most software this is 1, some software send out artnet first universe as 0.
+const int startUniverse = 7;  // CHANGE FOR YOUR SETUP most software this is 1, some software send out artnet first universe as 0.
 
 // Check if we got all universes
-const int maxUniverses = 2;
+const int maxUniverses = 1;
 bool universesReceived[maxUniverses];
 bool sendFrame = 1;
 
